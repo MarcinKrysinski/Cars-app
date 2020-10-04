@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CarsFrontAndBackend.iml" filepath="$PROJECT_DIR$/.idea/CarsFrontAndBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cars-api/restapi-w3.iml" filepath="$PROJECT_DIR$/cars-api/restapi-w3.iml" />
+    </modules>
+  </component>
+</project>
