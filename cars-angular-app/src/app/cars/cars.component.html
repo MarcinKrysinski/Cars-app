@@ -1,39 +1,60 @@
 <!--<p>cars works! {{cars|json}}</p>-->
+<body>
 
-<h2>My Cars</h2>
-<ul class="cars">
-  <li *ngFor="let car of cars">
-    <a routerLink="/details-car/{{car.id}}">
-      <span class="badge">{{car.id}}</span> {{car.mark}} {{car.model}} {{car.color}}
-    </a>
-    <a routerLink="/details-car/{{car.id}}"><button>update</button></a>
-    <button (click)="deleteCar(car.id)">delete</button>
-  </li>
-</ul>
-<!--<a routerLink="/add-car"><button>Add new</button></a>-->
+  <header>
+    <h1>Cars app</h1>
+  </header>
 
-<div>
-  <h2> Add New Car </h2>
-  <div>
-    <label>id:
-      <input [(ngModel)]="car.id" placeholder="id" type="number" />
-    </label>
-    <br>
-    <label>mark:
-      <input [(ngModel)]="car.mark" placeholder="mark" />
-    </label>
-    <br>
-    <label>model:
-      <input [(ngModel)]="car.model" placeholder="model" />
-    </label>
-    <br>
-    <label>colour:
-      <input [(ngModel)]="car.color" placeholder="colour" />
-    </label>
-  </div>
-  <button (click)="saveCar()">Save</button>
-</div>
+  <main id="main">
 
+    <section>
+      <div class="list">
+        <h2>My Cars</h2>
+        <ul class="cars" style="list-style-type: none">
+          <li id="car" *ngFor="let car of cars">
+            <a routerLink="/details-car/{{car.id}}">
+              <span class="badge">{{car.id}}</span> {{car.mark}} {{car.model}} {{car.color}}
+            </a>
+            <div class="buttons">
+              <a routerLink="/details-car/{{car.id}}">
+                <button class="buttonUpdate">update</button>
+              </a>
+              <button class="button" (click)="deleteCar(car.id)">delete</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--<a routerLink="/add-car"><button>Add new</button></a>-->
+
+    <section>
+      <div class="addCar">
+        <h2> Add New Car </h2>
+        <div>
+          <label>id:
+            <input [(ngModel)]="car.id" placeholder="id" type="number"/>
+          </label>
+          <br>
+          <label>mark:
+            <input [(ngModel)]="car.mark" placeholder="mark"/>
+          </label>
+          <br>
+          <label>model:
+            <input [(ngModel)]="car.model" placeholder="model"/>
+          </label>
+          <br>
+          <label>colour:
+            <input [(ngModel)]="car.color" placeholder="colour"/>
+          </label>
+        </div>
+        <button (click)="saveCar()">Save</button>
+      </div>
+    </section>
+    <div style="clear:both"></div>
+
+  </main>
+</body>
 
 
 
