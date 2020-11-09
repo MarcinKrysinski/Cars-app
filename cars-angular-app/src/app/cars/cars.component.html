@@ -2,7 +2,47 @@
 <body>
 
   <header>
-    <h1>Cars app</h1>
+    <nav class="navbar navbar-expand ">
+      <h1 id="logo">CarsApp</h1>
+      <button class="navbar-toggler order-last" type="button" data-toggle="collapse" data-target="#addCarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<!--      <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+
+      <div class="collapse navbar-collapse" id="addCarMenu">
+        <div class="nav-item">
+          <label>id:
+            <input [(ngModel)]="car.id" placeholder="id" type="number"/>
+          </label>
+        </div>
+
+        <div class="nav-item">
+          <label>mark:
+            <input [(ngModel)]="car.mark" placeholder="mark"/>
+          </label>
+        </div>
+
+        <div class="nav-item">
+          <label>model:
+            <input [(ngModel)]="car.model" placeholder="model"/>
+          </label>
+        </div>
+
+        <div class="nav-item">
+          <label>colour:
+            <input [(ngModel)]="car.color" placeholder="colour"/>
+          </label>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-item-button" (click)="saveCar()">Add</button>
+        </div>
+      </div>
+
+    </nav>
+
   </header>
 
   <main id="main">
@@ -13,7 +53,7 @@
         <ul class="cars" style="list-style-type: none">
           <li id="car" *ngFor="let car of cars">
             <a routerLink="/details-car/{{car.id}}">
-              <span class="badge">{{car.id}}</span> {{car.mark}} {{car.model}} {{car.color}}
+              <span class="badge">{{car.id}}</span> {{car.id}} {{car.mark}} {{car.model}} {{car.color}}
             </a>
             <div class="buttons">
               <a routerLink="/details-car/{{car.id}}">
@@ -28,29 +68,29 @@
 
     <!--<a routerLink="/add-car"><button>Add new</button></a>-->
 
-    <section>
-      <div class="addCar">
-        <h2> Add New Car </h2>
-        <div>
-          <label>id:
-            <input [(ngModel)]="car.id" placeholder="id" type="number"/>
-          </label>
-          <br>
-          <label>mark:
-            <input [(ngModel)]="car.mark" placeholder="mark"/>
-          </label>
-          <br>
-          <label>model:
-            <input [(ngModel)]="car.model" placeholder="model"/>
-          </label>
-          <br>
-          <label>colour:
-            <input [(ngModel)]="car.color" placeholder="colour"/>
-          </label>
-        </div>
-        <button (click)="saveCar()">Save</button>
-      </div>
-    </section>
+<!--    <section>-->
+<!--      <div class="addCar">-->
+<!--        <h2> Add New Car </h2>-->
+<!--        <div>-->
+<!--          <label>id:-->
+<!--            <input [(ngModel)]="car.id" placeholder="id" type="number"/>-->
+<!--          </label>-->
+<!--          <br>-->
+<!--          <label>mark:-->
+<!--            <input [(ngModel)]="car.mark" placeholder="mark"/>-->
+<!--          </label>-->
+<!--          <br>-->
+<!--          <label>model:-->
+<!--            <input [(ngModel)]="car.model" placeholder="model"/>-->
+<!--          </label>-->
+<!--          <br>-->
+<!--          <label>colour:-->
+<!--            <input [(ngModel)]="car.color" placeholder="colour"/>-->
+<!--          </label>-->
+<!--        </div>-->
+<!--        <button (click)="saveCar()">Save</button>-->
+<!--      </div>-->
+<!--    </section>-->
     <div style="clear:both"></div>
 
   </main>

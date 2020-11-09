@@ -11,6 +11,7 @@ import { DetailsCarComponent } from './details-car/details-car.component';
 
 
 
+
 const appRoutes: Routes = [
   {
     path: 'cars',
@@ -46,6 +47,6 @@ const appRoutes: Routes = [
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, CarsComponent]
 })
 export class AppModule { }
