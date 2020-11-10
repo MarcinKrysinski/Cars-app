@@ -1,4 +1,3 @@
-<!--<p>cars works! {{cars|json}}</p>-->
 <body>
 
   <header>
@@ -7,9 +6,6 @@
       <button class="navbar-toggler order-last" type="button" data-toggle="collapse" data-target="#addCarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-<!--      <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
 
       <div class="collapse navbar-collapse" id="addCarMenu">
         <div class="nav-item">
@@ -47,50 +43,35 @@
 
   <main id="main">
 
-    <section>
-      <div class="list">
-        <h2>My Cars</h2>
-        <ul class="cars" style="list-style-type: none">
-          <li id="car" *ngFor="let car of cars">
-            <a routerLink="/details-car/{{car.id}}">
-              <span class="badge">{{car.id}}</span> {{car.id}} {{car.mark}} {{car.model}} {{car.color}}
-            </a>
-            <div class="buttons">
-              <a routerLink="/details-car/{{car.id}}">
-                <button class="buttonUpdate">update</button>
-              </a>
-              <button class="button" (click)="deleteCar(car.id)">delete</button>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <h2 id="tableTitle"> Car List</h2>
+    <table class = "table table-striped">
+      <thead>
+      <tr>
+        <th> Id</th>
+        <th> Mark</th>
+        <th> Model</th>
+        <th> Color </th>
+        <th id="columnTitleAction"> Action </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let car of cars" >
+        <td> {{ car.id}} </td>
+        <td> {{ car.model }} </td>
+        <td> {{ car.mark }} </td>
+        <td> {{ car.color }} </td>
+        <td>
+          <a routerLink="/details-car/{{car.id}}">
+            <button class="buttonUpdate">Update</button>
+          </a>
+          <button class="buttonDelete"(click)="deleteCar(car.id)"  >Delete</button>
+        </td>
+        <td>
+        </td>
+      </tr>
+      </tbody>
+    </table>
 
-    <!--<a routerLink="/add-car"><button>Add new</button></a>-->
-
-<!--    <section>-->
-<!--      <div class="addCar">-->
-<!--        <h2> Add New Car </h2>-->
-<!--        <div>-->
-<!--          <label>id:-->
-<!--            <input [(ngModel)]="car.id" placeholder="id" type="number"/>-->
-<!--          </label>-->
-<!--          <br>-->
-<!--          <label>mark:-->
-<!--            <input [(ngModel)]="car.mark" placeholder="mark"/>-->
-<!--          </label>-->
-<!--          <br>-->
-<!--          <label>model:-->
-<!--            <input [(ngModel)]="car.model" placeholder="model"/>-->
-<!--          </label>-->
-<!--          <br>-->
-<!--          <label>colour:-->
-<!--            <input [(ngModel)]="car.color" placeholder="colour"/>-->
-<!--          </label>-->
-<!--        </div>-->
-<!--        <button (click)="saveCar()">Save</button>-->
-<!--      </div>-->
-<!--    </section>-->
     <div style="clear:both"></div>
 
   </main>

@@ -42,13 +42,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public boolean addCar(Car car){
-        Optional<Car> foundCarId = carsList.stream().filter(c -> car.getId().equals(car.getId())).findFirst();
+    public boolean addCar(Car newCar){
+        Optional<Car> foundCarId = carsList.stream().filter(car -> car.getId().equals(newCar.getId())).findFirst();
         if (foundCarId.isPresent())
         {
             return false;
         }
-        return carsList.add(car);
+        return carsList.add(newCar);
     }
 
     @Override

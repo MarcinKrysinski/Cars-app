@@ -3,18 +3,16 @@
   margin-right: auto;
   margin-left: auto;
 }
-#car{
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
+
 #logo{
   margin-left: 10px;
   margin-right: 50px;
 }
+
+#tableTitle{
+  text-align-all: center;
+}
 .navbar{
-  /*width: 100%;*/
-  /*margin-left: 0px;*/
-  /*margin-right: 0px;*/
   color: white;
   background-color: #051b11;
 }
@@ -25,7 +23,6 @@
 
 .nav-item-button{
   margin-left: 10px;
-  /*margin-right: 5px;*/
   background-color: #6c757d;
   border: none;
   color: white;
@@ -35,29 +32,7 @@
   display: inline-block;
 }
 
-.list{
-  float:left;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px 100px 100px;
-  width: auto;
-}
-
-.addCar{
-  float:left;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px 100px 100px;
-}
-
-.buttons{
-
-  float: right;
-
-}
 .buttonUpdate{
-  margin-left: 20px;
-  margin-right: 5px;
   background-color: #3079f0;
   border: none;
   color: white;
@@ -65,5 +40,14 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /*font-size: 16px;*/
+}
+.buttonDelete{
+  margin-left: 5px;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }

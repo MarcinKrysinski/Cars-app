@@ -1,0 +1,26 @@
+#updateBtn{
+  margin-top: 15px;
+  background-color: #3079f0;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#backBtn{
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: #4e555b;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.form-group{
+  margin-top: 15px;
+}
